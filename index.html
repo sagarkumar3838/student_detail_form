@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Student Details Form</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js" integrity="sha512-jq8sZI0I9Og0nnZ+CfJRnUzNSDKxr/5Bvha5bn7AHzTnRyxUfpUArMzfH++mwE/hb2efOo1gCAgI+1RMzf8F7g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      /* Custom styles to ensure the background covers the entire viewport */
+      .background {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          z-index: -1;
+      }
+  </style>
+</head>
+<body>
+  <div class="bg-transparent p-6 rounded-lg   min-w-full max-w-lg mt-4  container">
+
+  
+     
+    <h1 class="text-xl font-semibold mb-4  flex-auto text-center">Add Student Details Dynamically</h1>
+    <form id="studentForm">
+        <div id="inputContainer">
+            <div class="input-group flex items-center mb-4">
+                
+                <input type="text" name="studentName[]" placeholder="Student Name" required class="border border-gray-300 rounded p-2 mr-2 flex-1">
+                <input type="number" name="studentAge[]" placeholder="Age" required class="border border-gray-300 rounded p-2 mr-2 w-20">
+                <input type="email" name="studentEmail[]" placeholder="Email" required class="border border-gray-300 rounded p-2 mr-2 flex-1">
+                <input type="file" name="studentImage[]" placeholder="Avatar" accept="image/*" required class="border border-gray-300 rounded p-2 mr-2">
+                <button type="button" class="remove-btn bg-red-500 text-white rounded px-4 py-2">Remove</button>
+            </div>
+           
+        </div>
+        
+        <div class="  flex  justify-center gap-4 mb-4  ">
+          <button type="button" id="addInputBtn" class="bg-blue-500 text-white rounded px-4 py-2 shadow-lg shadow-blue-500/50 ">Add Student</button>
+          <button type="submit" class="bg-green-500 text-white rounded px-4 py-2 shadow-lg shadow-green-500/50">Submit</button>
+        </div>
+      
+    </form>
+
+
+
+
+    <div class="flex flex-col   mt-[5rem] ">
+      <div class="-m-1.5 overflow-x-auto">
+        <div class="p-1.5 min-w-full inline-block align-middle">
+          <div class="overflow-hidden">
+            <table class="max-w-5xl mx-auto table-auto" id="dataTable">
+              <thead class="justify-between">
+                <tr class=" border-b-2 border-gray-300 bg-gray-200">
+                  <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase dark:text-neutral-500">Name</th>
+                  <th scope="col" class="px-14 py-3 text-start text-xs font-medium text-gray-500 uppercase dark:text-neutral-500">Age</th>
+                  <th scope="col" class="px-14 py-3 text-start text-xs font-medium text-gray-500 uppercase dark:text-neutral-500">Email</th>
+                  <th scope="col" class="px-14 py-3 text-start text-xs font-medium text-gray-500 uppercase dark:text-neutral-500">Avatar</th>
+                  
+                </tr>
+              </thead>
+              <tbody class="tbody1"  id="tableBody">
+                <h1 class="mb-6 text-center text-xl  font-bold" >DATA STORE IN TABULAR FORM</h1>
+               
+          <!-- Data will be added here dynamically -->
+      </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>     
+    
+</table>
+
+</div>
+
+
+<!--  table code -->
+<canvas class="background "></canvas> 
+
+    <script src="path/to/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.js" integrity="sha512-BgV3bZfMmUklIZI+dP0SILdmQ0RBY2gxegFFyfgo4Ui56WhKF4Pny9LsV/l96jxDDA+2w47zAXA4IyHo2UT/Qg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+</body>
+</html>
